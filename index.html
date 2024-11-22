@@ -6,54 +6,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <div class="one"></div>
-    
-
+    <style>
+        div {
+            position: relative;
+            top: 100px;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+        }
+        
+        div:before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: blue;
+        }
+        
+        div:after {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 50px;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border-radius: 50%;
+        }
+        
+        div:before {
+            background-color: tomato;
+        }
+        
+        div:after {
+            background-color: tomato;
+        }
+        
+        div {
+            position: relative;
+            top: 100px;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            transform: rotate(-45deg);
+        }
+    </style>
 </head>
 
 <body>
-    .one{
-      position:relative;
-      width:100px;
-      height:100px;
-      background:pink;
-      margin-left:100px;
-      margin-top:100px;
-      transform:rotate(-45deg);
-      
-    }
-    .one:before{
-      content:"";
-      position:absolute;
-      width:100px;
-      height:100px;
-      background-color:pink;
-      border-radius:50%;
-      top:-50px;
-    	left:0;
-    }
-    .one:after{
-      content:"";
-      position:absolute;
-      background-color:pink;
-      border-radius:50%;
-      height:100px;
-      width:100px;
-      left:50px;
-      top:0;
-    }
     <div class="one">
-      <span id="content">I love youI love youI love youI love youI love youI love you</span>
+      <span id="content">I love you</span>
+        #content{
+         position:absolute;
+          top:20px;
+          left:25px;
+          z-index:2;
+          font-size:15px;
+          transform:rotate(45deg);
+        }
     </div>
-    #content{
-     position:absolute;
-      top:20px;
-      left:25px;
-      z-index:2;
-      font-size:15px;
-      transform:rotate(45deg);
-    }
-
 
 </body>
 
